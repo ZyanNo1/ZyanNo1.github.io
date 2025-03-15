@@ -1,57 +1,180 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #0078d7;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-        }
-        section {
-            margin-bottom: 20px;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        a {
-            color: #0078d7;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZyanL's Page</title>
+  <!-- 引入 Google 字体 -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #f0f2f0, #000c40);
+      color: #333;
+      overflow-x: hidden;
+    }
+    /* 导航栏样式 */
+    nav {
+      background: rgba(255, 255, 255, 0.8);
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      padding: 15px 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: #e0e0e0;
+    }
+    /* 页头样式 */
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(255,255,255,0.9);
+    }
+    header h1 {
+      margin-bottom: 20px;
+      font-size: 3em;
+      color: #333;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #555;
+    }
+    /* 主区域样式 */
+    .hero {
+      max-width: 1200px;
+      margin: 40px auto;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+    }
+    .hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      margin-bottom: 20px;
+    }
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      color: #fff;
+      background: #0078d7;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #005fa3;
+    }
+    /* 信息板块样式 */
+    section {
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.95);
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: #333;
+    }
+    section p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      color: #555;
+      text-align: center;
+    }
+    /* 页脚样式 */
+    footer {
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    /* 响应式适配 */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+      nav a {
+        padding: 10px 15px;
+        font-size: 0.9em;
+      }
+      .hero h2 {
+        font-size: 2em;
+      }
+      .hero p {
+        font-size: 1em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>欢迎访问！</h1>
-    </header>
-    <main>
-        <section>
-            <h2>关于我</h2>
-            <img src="ZyanL.jpg" alt="我的头像" style="width:150px; height:150px; border-radius:50%; display:block; margin-bottom:10px;">
-            <p>你好！我是Zyan，目前是一个菜鸟。</p>
-        </section>
-    </main>
-    <footer>
-        &copy; 2025 我的个人主页. 版权所有.
-    </footer>
+  <!-- 导航栏 -->
+  <!--
+  <nav>
+    <a href="#">主页</a>
+    <a href="#">关于我</a>
+    <a href="#">作品集</a>
+    <a href="#">联系</a>
+  </nav>
+  -->
+  <!-- 页头 -->
+  <header>
+    <h1>欢迎来到我的主页</h1>
+    <p>探索创意与技术交汇的世界</p>
+  </header>
+  
+  <!-- 主体内容区域 -->
+  <div class="hero">
+    <!-- 个人信息 -->
+    <img src="ZyanL.jpg" alt="我的头像">
+    <h2>我是 ZyanL</h2>
+    <p>数据科学与工程在读。目前是一个菜鸟，正在努力学习中！</p>
+
+  </div>
+  
+  <!-- 项目 -->
+  <section>
+    <h2>项目</h2>
+    <ul>
+        <li>
+          <h3>Issue-label_bot</h3>
+          <p>一个基于RoBERTa的issue自动分类机器人</p>
+          <a href="https://github.com/teamkongju/kongju/tree/main/%E5%A4%8D%E8%B5%9B" class="btn">查看详情</a>
+        </li>
+    <ul>
+  </section>
+  
+  <!-- 页脚 -->
+  <footer>
+    <p>&copy; 2025 ZyanL's Personal Website. All rights reserved.</p>
+  </footer>
 </body>
 </html>
