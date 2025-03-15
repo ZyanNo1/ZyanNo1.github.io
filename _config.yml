@@ -1,3 +1,6 @@
-theme: jekyll-theme-minimal
+theme: minima
 title: testPage
-description: This is a test page.
+description: "This is a test page".
+url: "https://zyan.github.io"
+author: 
+  name: ZyanL
