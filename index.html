@@ -13,13 +13,28 @@
       padding: 0;
       box-sizing: border-box;
     }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    /* 使用Flex布局，确保body垂直方向充满 */
     body {
+      display: flex;
+      flex-direction: column;
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
       background: linear-gradient(135deg, #f0f2f0, #000c40);
       color: #333;
       overflow-x: hidden;
     }
+
+    /* 主内容区域，使用flex:1 填充剩余空间 */
+    .content {
+      flex: 1;
+    }
+
     /* 导航栏样式（可选） */
     nav {
       background: rgba(255, 255, 255, 0.8);
@@ -37,17 +52,19 @@
     nav a:hover {
       background: #e0e0e0;
     }
+    
     /* 页头样式 */
     header {
       text-align: center;
-      padding: 60px 20px;
+      padding: 30px 20px;
       background: rgba(255,255,255,0.9);
     }
     header h1 {
-      margin-bottom: 20px;
-      font-size: 3em;
+      margin-bottom: 10px;
+      font-size: 2em;
       color: #333;
     }
+    
     /* 主区域样式 */
     .hero {
       max-width: 1200px;
@@ -85,21 +102,23 @@
     .btn:hover {
       background: #005fa3;
     }
+    
     /* 项目区域样式 */
     section {
       padding: 40px 20px;
       background: rgba(255, 255, 255, 0.95);
-      margin: 20px;
+      margin: 20px;       /* 原有的四周 margin */
+      margin-top: 60px;   /* 增加顶部 margin */
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+
     section h2 {
       text-align: center;
       margin-bottom: 20px;
       font-size: 2em;
       color: #333;
     }
-    /* 改进后的项目列表样式 */
     section ul.project-list {
       list-style: none;
       padding: 0;
@@ -127,6 +146,7 @@
       color: #555;
       margin-bottom: 15px;
     }
+    
     /* 页脚样式 */
     footer {
       background: rgba(0,0,0,0.8);
@@ -134,6 +154,7 @@
       text-align: center;
       padding: 20px;
     }
+    
     /* 响应式适配 */
     @media (max-width: 768px) {
       header h1 {
@@ -156,7 +177,6 @@
   </style>
 </head>
 <body>
-  <!-- 导航栏 -->
   <!--
   <nav>
     <a href="#">主页</a>
@@ -171,26 +191,30 @@
     <h1>欢迎来到我的主页!</h1>
   </header>
   
-  <!-- 主体内容区域 -->
-  <div class="hero">
-    <!-- 个人信息 -->
-    <img src="ZyanL.jpg" alt="我的头像">
-    <h2>我是 ZyanL</h2>
-    <p>数据科学与工程在读。目前是一个菜鸟，正在努力学习中！</p>
+  <!-- 主体内容 -->
+  <div class="content">
+    <!-- 主体内容区域 -->
+    <div class="hero">
+      <!-- 个人信息 -->
+      <img src="ZyanL.jpg" alt="我的头像">
+      <h2>我是 ZyanL</h2>
+      <p>数据科学与工程专业在读。目前是一个菜鸟，正在努力学习中！</p>
+      <a herf="https://github.com/ZyanNo1/">Github 主页</a>
+    </div>
+    
+    <!-- 项目区域 -->
+    <section>
+      <h2>项目</h2>
+      <ul class="project-list">
+        <li class="project-item">
+          <h3>Issue_label_bot</h3>
+          <p>一个基于RoBERTa的issue自动分类机器人</p>
+          <a href="https://github.com/teamkongju/kongju/tree/main/%E5%A4%8D%E8%B5%9B" class="btn">查看详情</a>
+        </li>
+        <!-- 可添加更多项目 -->
+      </ul>
+    </section>
   </div>
-  
-  <!-- 项目区域 -->
-  <section>
-    <h2>项目</h2>
-    <ul class="project-list">
-      <li class="project-item">
-        <h3>Issue_label_bot</h3>
-        <p>一个基于RoBERTa的issue自动分类机器人</p>
-        <a href="https://github.com/teamkongju/kongju/tree/main/%E5%A4%8D%E8%B5%9B" class="btn">查看详情</a>
-      </li>
-      <!-- 如果日后有更多项目，可以添加更多<li class="project-item"> -->
-    </ul>
-  </section>
   
   <!-- 页脚 -->
   <footer>
